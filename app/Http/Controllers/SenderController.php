@@ -54,4 +54,10 @@ class SenderController extends Controller
         
         return redirect()->route('sender.success')->with('form_error', 'Teklif Seçildi');
     }
+
+    public function addNewPacket()
+    {
+        $this->requestRepository->create(request()->all());
+        return redirect()->route('sender.pending')->with('form_error', 'Paket Eklendi');
+    }
 }

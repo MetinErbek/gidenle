@@ -123,20 +123,16 @@ return new class extends Migration
             Schema::create('requests', function (Blueprint $table) {
                 $table->integer('request_id', true);
                 $table->integer('request_owner_id');
-                $table->integer('request_cat_id');
-                $table->integer('request_real_cat_id');
-                $table->integer('level_target');
-                $table->string('safe_url', 255);
-                $table->string('request_title', 255);
-                $table->text('request_details');
-                $table->string('il', 255);
-                $table->string('ilce', 255);
-                $table->integer('first_lesson_free')->default(0);
-                $table->string('offer_price', 255);
-                $table->dateTime('request_date');
-                $table->string('request_status', 255)->default('passive');
+                $table->string('packet_from', 255);
+                $table->string('packet_to', 255);
+                $table->string('safe_url', 255)->default('');
+                $table->string('packet_name', 255)->nullable();
+                $table->text('packet_details')->nullable();
+                $table->string('offer_price', 255)->nullable();
+                $table->dateTime('request_date')->nullable()->useCurrent();
+                $table->string('request_status', 255)->default('active');
                 $table->dateTime('create_date')->nullable()->useCurrent();
-                $table->dateTime('expire_date');
+                $table->dateTime('expire_date')->nullable();
             });
         }
 

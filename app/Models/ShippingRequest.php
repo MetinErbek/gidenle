@@ -12,15 +12,12 @@ class ShippingRequest extends Model
 
     protected $fillable = [
         'request_owner_id',
-        'request_cat_id',
-        'request_real_cat_id',
-        'level_target',
+        'packet_name',
+        'packet_from',
+        'packet_to',
         'safe_url',
         'request_title',
         'request_details',
-        'il',
-        'ilce',
-        'first_lesson_free',
         'offer_price',
         'request_date',
         'request_status',

@@ -10,7 +10,7 @@
                                 <div class="banner-form-agileinfo">
                                     <h5>Paket <span>Kaydı</span></h5>
                                     <p>Paketinizi kaydetmek ve taşıyabilecek birilerini bulabilmek ve takip edebilmek için bilgileri doldurun.</p>
-                                    <form action="{{ route('sender.send') }}" method="POST">
+                                    <form action="{{ route('sender.addnewpacket') }}" method="POST">
                                         @csrf
                                         <select class="form-control option-w3ls" name="packet_from">
                                             <option>Nereden</option>

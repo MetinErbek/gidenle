@@ -20,6 +20,7 @@ Route::get('/sender/register', [LoginController::class, 'senderRegister'])->name
 Route::post('/sender/register', [LoginController::class, 'postSenderRegister']);
 
 Route::get('/sender/send', [SenderController::class, 'send'])->name('sender.send');
+Route::post('/sender/addnewpacket', [SenderController::class, 'addNewPacket'])->name('sender.addnewpacket');
 Route::get('/sender/pending', [SenderController::class, 'pendingPackets'])->name('sender.pending');
 Route::get('/sender/success', [SenderController::class, 'successPackets'])->name('sender.success');
 
